@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yakka tartibdagi tadbirkorga imoratlar qurilishi uchun</title>
+  <link rel="shortcut icon" href="./images/agreement.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/874f255364.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- swipper js start -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+  <!-- header start -->
+  <header class="header">
+    <div class="containerr">
+      <div class="header-main">
+        <div class="logo">
+          <a href="./index.html"><i class="fa-solid fa-handshake"></i></a>
+        </div>
+        <div class="open-nav-menu">
+          <span></span>
+        </div>
+        <div class="menu-overlay"></div>
+        <!-- navigation menu start -->
+        <nav class="nav-menu">
+          <div class="close-nav-menu">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <ul class="menu">
+            <li class="menu-item menu-item-has-children">
+              <a data-toggle="sub-menu"
+                >Xizmatlar<i class="plus"></i
+              ></a>
+              <ul class="sub-menu">
+                <li class="menu-item">
+                  <a href="./bino-Inshotlar-uchun.html">Bino va inshotlar uchun</a>
+                </li>
+                <li class="menu-item">
+                  <a href="./asbob-uskuna.html">Asbob va uskunalar uchun</a>
+                </li>
+                <li class="menu-item"><a href="./YTT-imoratlar-uchun.html">YTT imoratlar uchun</a></li>
+                <li class="menu-item"><a href="./YTT-yer-uchun.html">YTT yer uchun</a></li>
+                <li class="menu-item"><a href="./YTT-uy-joy-uchun.html">YTT uy joy uchun</a></li>
+                <li class="menu-item">
+                  <a href="./taxi-faoliyati-uchun.html">Taxi faoliyati uchun</a>
+                </li>
+                <li class="menu-item">
+                  <a href="./YTT-avtomobil-olish-uchun.html">YTT Avtomobil olish uchun</a>
+                </li>
+                <li class="menu-item">
+                  <a href="./qishloq-texnikalari-uchun.html">Qishloq xo'jalik texnikalari uchun</a>
+                </li>
+                <li class="menu-item"><a href="./talaba.html">Talabalar uchun</a></li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="./yuridik-shaxslar.html">Yuridik shaxslar</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Jismoniy shaxslar</a>
+            </li>
+            <li class="menu-item">
+              <a href="./aloqa.html">Aloqa</a>
+            </li>
+            <li class="menu-item">
+              <a type="button" id="login" href="./login.html">Kirish</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- navigation menu end -->
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+<!-- Zayafka Modal start-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Arizangizni qoldiring</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="app-nav">
+          <div class="app-text__content1">
+            <p>Jismoniy shaxslar</p>
+          </div>
+          <div class="app-text__content2">
+            <p>Yuridik shaxslar</p>
+          </div>
+        </div>
+        <div class="application__content1">
+          <!-- Jismoniy shaxslar uchun form -->
+          <form id="physical_form" action="/" method="get">
+            <label id="name_label" for="fio">FIO:</label><br>
+            <input id="name_input" type="text" required placeholder="name..."><br>
+            <label id="date_label" for="birthday">Tug'ilgan kun</label><br>
+            <input id="date_input" type="date" required><br>
+            <label id="region_label" for="region">Viloyat</label><br>
+            <select name="select" id="region_select">
+              <option value="1">Region</option>
+              <option value="2">Xorazm Viloyati</option>
+              <option value="3">Buxoro Viloyati</option>
+              <option value="4">Farg'ona Viloyati</option>
+              <option value="5">Jizzax Viloyati</option>
+              <option value="6">Andijon Viloyati</option>
+              <option value="7">Namangan Viloyati</option>
+              <option value="8">Navoiy Viloyati</option>
+              <option value="9">Qashqadaryo Viloyati</option>
+              <option value="10">Qoraqalpog'iston Respublikasi</option>
+              <option value="11">Samarqand Viloyati</option>
+              <option value="12">Sirdarydo Viloyati</option>
+              <option value="13">Surxondaryo Viloyati</option>
+              <option value="14">Toshkent Viloyati</option>
+              <option value="14">Toshkent Shahri</option>
+            </select><br>
+            <label id="city_label" for="city">Shahar yoki tuman</label><br>
+            <input id="city_input" type="text" required placeholder="city"><br>
+            <label id="street_label" for="street_label">Ko'cha</label><br>
+            <input id="street_input" type="text" required placeholder="street"><br>
+            <label id="number_label" for="street_number">Uy raqami</label><br>
+            <input id="number_input" type="number" required placeholder="street number"><br>
+            <label id="key_label" for="key_number">Kalit raqami</label><br>
+            <input id="key_input" type="number" required placeholder="Kalit raqamini kiriting"><br>
+            <label id="qarz_label" for="qarz_input" >Qarz miqdori</label><br>
+            <input id="qarz_input" type="number" placeholder="qarz miqdorini kiriting" required maxlength="6"><br>
+            <label id="srok_label" for="srok_input">Muddati</label><br>
+            <input id="srok_input" type="number" placeholder="qarzni qaytarish muddati kiriting" required><br>
+            <label id="ish_label" for="ish_input">Yaratiladigan ish o'rni</label><br>
+            <input id="ish_input" type="number" placeholder="Tadbirkorlik faoliyati uchun"><br>
+            <label id="murojat_label" for="murojat_input">Murojat matni</label><br>
+            <textarea name="" id="murojat_input" cols="50" rows="8" placeholder="Qarz olishdan maqsadingiz"></textarea required><br>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiqish</button>
+            <button type="submit" class="btn btn-primary">Ariza yuborish</button>
+          </form>
+        </div>
+        <div class="application__content2">
+          <!-- Yuridik shaxslar uchun -->
+          <form id="physical_form" action="/" method="get">
+            <label id="name_label" for="fio">Tashkilot nomi</label><br>
+            <input id="name_input" type="text" required placeholder="company name"><br>
+            <label id="name_label" for="fio">Yuridik manzil</label><br>
+            <input id="name_input" type="text" required placeholder="address"><br>
+            <label id="name_label" for="fio">MFO:</label><br>
+            <input id="name_input" type="text" required placeholder="MFO"><br>
+            <label id="name_label" for="fio">INN</label><br>
+            <input id="name_input" type="text" required placeholder="INN number"><br>
+            <label id="street_label" for="street_label">Tel:</label><br>
+            <input id="street_input" type="number" required placeholder="telefon number"><br>
+            <label id="number_label" for="street_number">Hisob raqami</label><br>
+            <input id="number_input" type="number" required placeholder="account number"><br>
+            <label id="key_label" for="key_number">Kalit raqami</label><br>
+            <input id="key_input" type="text" placeholder="Kalit raqamini kiriting" required>
+            <label id="qarz_label" for="qarz_input" >Qarz miqdori</label><br>
+            <input id="qarz_input" type="text" placeholder="qarz miqdorini kiriting" required maxlength="6"><br>
+            <label id="srok_label" for="srok_input">Muddati</label><br>
+            <input id="srok_input" type="number" placeholder="qarzni qaytarish muddatini kiriting" required><br>
+            <label id="ish_label" for="ish_input">Yaratiladigan ish o'rni</label><br>
+            <input id="ish_input" type="number" placeholder="Tadbirkorlik faoliyati uchun"><br>
+            <label id="murojat_label" for="murojat_input">Murojat matni</label><br>
+            <textarea name="" id="murojat_input" cols="50" rows="8" placeholder="Qarz olishdan maqsadingiz"></textarea required><br>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiqish</button>
+            <button type="submit" class="btn btn-primary">Ariza yuborish</button>
+          </form>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiqish</button>
+        <button type="submit" class="btn btn-primary">Ariza yuborish</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- Zayafka Modal end-->
+
+
+<!-- Head content start -->
+<section class="buildingSec">
+  <div class="containerr">
+    <div class="buil__content">
+      <div class="buil__head">
+        <p class="build__title">Yakka tartibdagi tadbirkorlik faoliyatini amalga oshirish maqsadida imorat va inshotlar qurilishi uchun 100 000 000 (yuz million) so'mdan 1 000 000 000 (bir milliard) so'mgacha <span style="color: #0069db">5 yildan - 10 yilgacha </span>qarz oling</p>
+        <div class="char-block__build">
+          <p class="char__build">
+            <span>Taklif</span><br>
+            <font>0%(foizsiz)</font>
+          </p>
+          <p class="char__build">
+            <span>Pul</span><br>
+            <font>1 milliard so'mgacha</font>
+          </p>
+        </div>
+        <button type="button" data-btn="" class="buildBtn btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Qarz olish</button>
+      </div>
+      <img class="buildimg" src="./images/xizmatlar-images/head-bus1.png">
+    </div>
+  </div>
+</section>
+<!-- Head content end -->
+
+<!-- Our prod section start -->
+<section class="our-prod-section" id="ourprodsec">
+  <div class="containerr">
+    <h2 class="headline">MAQSADLARINGIZNI AMALGA OSHIRISH UCHUN QULAY SHAROITDAN FOYDALANING!</h2>
+    <div class="our-prod">
+      <div class="our-prod_it">
+        <a href="./YTT-yer-uchun.html">
+          <img src="./images/xizmatlar-images/prod1.jpg" alt="ourprod1">
+        </a>
+        <div class="prod_it-desc">
+          <p class="tags">BIZNES</p>
+          <p class="prod-name">YTT yer uchun</p>
+          <a href="./YTT-yer-uchun.html"><span class="mores">Ko'proq</span><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="our-prod_it">
+        <a href="./bino-Inshotlar-uchun.html">
+          <img src="./images/xizmatlar-images/prod2.jpg" alt="ourprod2">
+        </a>
+        <div class="prod_it-desc">
+          <p class="tags">SHAXSLAR</p>
+          <p class="prod-name">Bino va inshotlar</p>
+          <a href="./bino-Inshotlar-uchun.html"><span class="mores">Ko'proq</span><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="our-prod_it">
+        <a href="./YTT-imoratlar-uchun.html">
+          <img src="./images/xizmatlar-images/prod3.jpg" alt="ourprod3">
+        </a>
+        <div class="prod_it-desc">
+          <p class="tags">SHAXSLAR</p>
+          <p class="prod-name">YTT imoratlar uchun</p>
+          <a href="./YTT-imoratlar-uchun.html"><span class="mores">Ko'proq</span><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="our-prod_it">
+        <a href="./asbob-uskuna.html">
+          <img src="./images/xizmatlar-images/prod4.jpg" alt="ourprod4">
+        </a>
+        <div class="prod_it-desc">
+          <p class="tags">SHAXSLAR</p>
+          <p class="prod-name">Asbob va uskunalar</p>
+          <a href="./asbob-uskuna.html"><span class="mores">Ko'proq</span><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="our-prod_it">
+        <a href="./taxi-faoliyati-uchun.html">
+          <img src="./images/xizmatlar-images/prod5.jpg" alt="ourprod5">
+        </a>
+        <div class="prod_it-desc">
+          <p class="tags">SHAXSLAR</p>
+          <p class="prod-name">Taxi faoliyati uchun</p>
+          <a href="./taxi-faoliyati-uchun.html"><span class="mores">Ko'proq</span><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="our-prod_it">
+        <a href="./YTT-avtomobil-olish-uchun.html">
+          <img src="./images/xizmatlar-images/prod6.jpg" alt="ourprod6">
+        </a>
+        <div class="prod_it-desc">
+          <p class="tags">SHAXSLAR</p>
+          <p class="prod-name">Avtomobil olish uchun</p>
+          <a href="./YTT-avtomobil-olish-uchun.html"><span class="mores">Ko'proq</span><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="our-prod_it">
+        <a href="./qishloq-texnikalari-uchun.html">
+          <img src="./images/xizmatlar-images/prod7.jpg" alt="ourprod7">
+        </a>
+        <div class="prod_it-desc">
+          <p class="tags">SHAXSLAR</p>
+          <p class="prod-name">Qishloq xo'jalik texnikalari</p>
+          <a href="./qishloq-texnikalari-uchun.html"><span class="mores">Ko'proq</span><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="our-prod_it">
+        <a href="./YTT-uy-joy-uchun.html">
+          <img src="./images/xizmatlar-images/prod8.jpg" alt="ourprod8">
+        </a>
+        <div class="prod_it-desc">
+          <p class="tags">SHAXSLAR</p>
+          <p class="prod-name">Uy joy uchun</p>
+          <a href="./YTT-uy-joy-uchun.html"><span class="mores">Ko'proq</span><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Our prod section end -->
+
+<!-- Footer start -->
+<footer>
+  <div class="containerr">
+    <div class="footer-nav">
+      <div class="footer-nav__block1">
+        <a class="main-link">Xizmatlar</a>
+        <ul>
+          <li><a href="./asbob-uskuna.html">Asbob va uskunalar uchun</a></li>
+          <li><a href="./YTT-imoratlar-uchun.html">YTT imoratlar uchun</a></li>
+          <li><a href="./bino-Inshotlar-uchun.html">Bino va inshotlar uchun</a></li>
+          <li><a href="./YTT-yer-uchun.html">YTT yer uchun</a></li>
+          <li><a href="./YTT-uy-joy-uchun.html">YTT uy joy uchun</a></li>
+          <li><a href="./taxi-faoliyati-uchun.html">Taxi faoliyati uchun</a></li>
+          <li><a href="./YTT-avtomobil-olish-uchun.html">YTT Avtomobil olish uchun</a></li>
+          <li><a href="./qishloq-texnikalari-uchun.html">Qishloq xo'jalik texnikalari uchun</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav__block2">
+        <a href="./yuridik-shaxslar.html" class="main-link">Yuridik shaxslar</a>
+        <a href="./jismoniy-shaxslar.html" class="main-link">Jismoniy shaxslar</a>
+        <a href="./aloqa.html" class="main-link">Aloqa</a>
+        <div class="footer-nav_block3">
+          <h6>Bizni ijtimoiy tarmoqlarda kuzatib boring</h6>
+          <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://t.me/Akmal_8882"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://www.instagram.com/akmal_8882"><i class="fa-brands fa-instagram-square"></i></a>
+        </div>
+      </div>
+      <div class="footer-call">
+        <h4>Universal Xizmatlar Byurosi</h4>
+        <div class="logo-footer">
+          <a href="./index.html"><i class="fa-solid fa-handshake"></i> UXB</a>
+        </div>
+        <p>Biz har qanday savollarga javob beramiz</p>
+        <a href="tel:+998900900174" type="phone"><i class="fa-solid fa-phone"> +998 90 090 01 74</i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer end -->
+
+<!-- Modal login start -->
+<div class="modall">
+  <div class="modall__dialog">
+    <div class="modall__content">
+      <div>
+        <h3 class="modal__title">Hisobingizga kiring</h3>
+        <div class="modall__close">&times;</div>
+      </div>
+      <form action="#">
+        <label class="m__label" for="">Telefon yoki pochta manzilingiz</label><br>
+        <input class="m__input" type="email" placeholder="name@gmail.com" required maxlength="100"> <br>
+        <label class="m__label" for="">Parolingiz</label><br>
+        <input class="m__input" type="password" placeholder="******" required maxlength="20"><br>
+        <button type="submit" class="m__btn">Hisobingizga kiring</button>
+      </form>
+    </div>
+  </div>
+</div>
+<!--Modal login end  -->
+
+<!-- Modal sign up start -->
+<div class="modalls">
+  <div class="modalls__dialog">
+    <div class="modalls__content">
+      <div>
+        <h3 class="modals__title">Ro'yhatdan o'ting</h3>
+        <div class="modalls__close">&times;</div>
+      </div>
+      <form action="/" method="post">
+        <label class="m__label" for="">FIO:</label><br>
+        <input data-name="" class="m__input" type="text" placeholder="Ism sharifingiz" required maxlength="100"> <br>
+        <label class="m__label" for="">Pochta manzilingiz</label><br>
+        <input class="m__input" type="email" placeholder="name@gmail.com" required maxlength="100"> <br>
+        <label class="m__label" for="">Telefon raqamingiz</label><br>
+        <input class="m__input" type="phone" placeholder="+998991234567" required maxlength="12"> <br>
+        <label class="m__label" for="">Parolingiz</label><br>
+        <input class="m__input" type="password" placeholder="******" required maxlength="20"><br>
+        <label class="m__label" for="">Parolingizni tasdiqlang</label><br>
+        <input class="m__input" type="password" placeholder="******" required maxlength="20"><br>
+        <button type="submit" class="m__btn">Hisobingizni yarating</button>
+      </form>
+    </div>
+  </div>
+</div>
+<!--Modal sign up end  -->
+
+  <!-- bootsrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
